@@ -1,0 +1,33 @@
+h1, h3 {
+    margin: 10px;
+}
+
+button.change_color:hover {
+    color: black;
+}
+.column-10 {
+    margin: 10px;
+}
+
+.dashboard {
+    width: 20%;
+}
+.courses {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 800px;
+}
+
+.course_board {
+    /* background-color: blue; */
+    width:80%;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.padding-left {
+    margin: 5px;
+}

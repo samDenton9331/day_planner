@@ -1,0 +1,26 @@
+{
+  "name": "personal_day_planner",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "firebase": "^5.9.0",
+    "firebase-admin": "^7.1.1",
+    "http-errors": "~1.6.2",
+    "http-server": "^0.11.1",
+    "jade": "~1.11.0",
+    "javascript-obfuscator": "^0.18.1",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.11",
+    "queue": "^6.0.1",
+    "save": "^2.3.3"
+  }
+}
