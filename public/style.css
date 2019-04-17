@@ -31,3 +31,35 @@ button.change_color:hover {
 .padding-left {
     margin: 5px;
 }
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+
+.Title {
+    position: absolute;
+    width: 1920px;
+    height: 1275px;
+    left: 0px;
+    top: -98px;
+
+    background: url(background.png);
+}
+
+.log_in_box {   
+    /* Rectangle */
+
+    position: absolute;
+    width: 597px;
+    height: 374px;
+    left: 662px;
+    top: 292px;
+
+    background: #FCFCFC;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
