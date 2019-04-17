@@ -13,96 +13,24 @@
 
     </head>
     <body>
-            <nav class="navbar navbar-dark bg-dark">
-                    <button class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="mx-auto order-0">
-                          <a class="navbar-brand mx-auto" href="#">Dashboard</a>
-                      </div>
-                  </nav>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="mx-auto order-0">
+             <a class="navbar-brand mx-auto" href="#">Dashboard</a>
+            </div>
+        </nav>
     
-    <div class = "container-fluid">
-        <div class="row">
-            <div class="nopadding dashboard">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xs-8"><h3>Planner:</h3></div>
-                        <div class="col-xs-8 column-10">
-                            <select class="form-control">
-                                <option value="ON">School</option>
-                                <option value="AB">Work</option>
-                            </select>
-                        </div>              
-                    </div>
-                </div>
-                
-                <!-- Button trigger modal -->
-            
-            <button type="button" class="btn btn-outline-dark padding-left" 
-                data-toggle="modal" data-target="#add_course_modal">Add Course</button>
-            <!-- Log in Modal -->
-            <div class="modal fade" id="log_in_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="false">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
+        <div class="fill">
+            <div class="container">
+                <div class="row pt-2 pl-2">
+                    <h3>My Courses</h3>
 
-                        <div class="modal-body">
-                        ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" id="log_in_button" data-dismiss="modal">Add Course</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="add_course_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-
-                        <div class="modal-body">
-                        ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" id="add_new_course" data-dismiss="modal">Add Course</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="border courses">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <h3>My Courses</h3>
-                        </div>
-                    </div>
-                    
-                    <!-- When they add courses to the list -->
-                    <ul id="current_courses"></ul>
-                </div>            
-            </div>  
-        
-            <div class="nopadding course_board">
-                Content goes here
+                <hr>
             </div>
         </div>
-    </div>
-
-    <script src="/index.js"></script>
-
+    <script src="/index.js"></script>        
     </body>
 </html>

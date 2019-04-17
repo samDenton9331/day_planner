@@ -1,5 +1,9 @@
 $(document).ready(function() {
-    console.log("loading");
+    // $('#create_account').height($('#log_in_button').height());
+    // $('#create_account').width($('#log_in_button').width());
+    console.log($("#create_account").width());
+    console.log($('#log_in_button').width());
+
 });
 
 $('#add_new_course').click(function(e) {
@@ -23,17 +27,22 @@ $('#add_new_course').click(function(e) {
 });
 
 $('#log_in_button').click(() => {
-    console.log("fire");
+    // TODO
     document.location.href = "/dashboard";
-})
+});
 
-$('#log_out').click(() => {
-    console.log("fire");
-    document.getElementById("log_in_button_menu").style.display = "block";
-    document.getElementById("log_out").style.display = "none";
-})
+$('#create_account').click(() => {
+    $('#create_account_btn').height($('#log_in_button').height());
+    document.getElementById("create_box").style.display = "block";
+    document.getElementById("log_box_div").style.display = "none";
+});
 
-function add_new_user () {
+$('#create_account_btn').click(() => {
+    // TODO
+    document.location.href = "/dashboard";
+});
+
+function add_new_user () {  
     let username = 'sam';
     let pwd = 'pwd';
     $.ajax({

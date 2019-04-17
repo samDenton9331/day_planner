@@ -1,6 +1,8 @@
-h1, h3 {
-    margin: 10px;
+html, body {
+    height: 100%;
+    width: 100%;
 }
+
 
 button.change_color:hover {
     color: black;
@@ -42,16 +44,58 @@ button.change_color:hover {
 
 .Title {
     position: absolute;
-    width: 100%;
-    height: 100%;
     background: url(image.png);
+    height: 100%;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
 }
 
+/* Red Login buttons */
+
+.log_in_box {   
+    /* Rectangle */
+
+    position: absolute;
+    width: 30%;
+    height: 40%;
+
+    background: #FCFCFC;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.log_in_box_create {   
+    /* Rectangle */
+
+    position: absolute;
+    width: 30%;
+    height: 40%;
+
+    background: #FCFCFC;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.red-button-create {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    width: 11.165%;
+    height: 5%;
+    background-color: #EF817A;
+    color: #FFFFFF;
+    
+}
 .red-button {
     width: 40%;
     background-color: #EF817A;
     color: #FFFFFF;
     height: 40%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .input-boxs-1 {
@@ -59,24 +103,23 @@ button.change_color:hover {
     padding-bottom: 2%;
 }
 
-.hamburger {
-    position: absolute;
-}
-
-.log_in_box {   
-    /* Rectangle */
-
-    position: absolute;
-    width: 597px;
-    height: 374px;
-    left: 662px;
-    top: 292px;
-
-    background: #FCFCFC;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
-
 .height {
     bottom: 10%;
+}
+
+.course-panel {
+    width: 30%;
+    
+    
+}
+
+.fill {
+    height: 100%;
+    width: 20%;
+    background-color: #E3E3E3;
+}
+
+
+.hamburger {
+    position: absolute;
 }

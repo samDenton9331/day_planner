@@ -132,5 +132,5 @@ app.get('/verify_user', (req, res) => {
   });
 })
 
-app.listen(8001);
-console.log('Running app at localhost: ' + 8001);
+app.listen(8000);
+console.log('Running app at localhost: ' + 8000);
