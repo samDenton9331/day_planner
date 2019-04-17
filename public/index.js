@@ -24,8 +24,7 @@ $('#add_new_course').click(function(e) {
 
 $('#log_in_button').click(() => {
     console.log("fire");
-    document.getElementById("log_in_button_menu").style.display = "none";
-    document.getElementById("log_out").style.display = "block";
+    document.location.href = "/dashboard";
 })
 
 $('#log_out').click(() => {

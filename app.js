@@ -54,6 +54,10 @@ app.get('/index.js',function(req,res){
   });
 });
 
+app.get('/dashboard',function(req,res){
+  res.sendFile(path.join(__dirname+'/public/dashboard.html'));
+});
+
 // ************** Create DB **************
 app.get('/create',function(req,res){
   let sql = 'CREATE DATABASE nodemysql';
@@ -61,6 +65,10 @@ app.get('/create',function(req,res){
     if (err) throw err;
     res.send("created");
   })
+});
+
+app.get('/image.png',function(req,res){
+  res.sendFile(path.join(__dirname+'/public/image.png'));
 });
 
 // Create table
@@ -124,5 +132,5 @@ app.get('/verify_user', (req, res) => {
   });
 })
 
-app.listen(8000);
-console.log('Running app at localhost: ' + 8000);
+app.listen(8001);
+console.log('Running app at localhost: ' + 8001);

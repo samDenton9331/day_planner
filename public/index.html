@@ -2,48 +2,36 @@
 <html>
     <head>
     <title>Personal Day Planner</title>
-    
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script> -->
-
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->\
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
- <!-- Custom CSS -->
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="/style.css">
-
     </head>
     <body>
+
         <div class="Title">
-            <div class="log_in_box">
-                <div class="container">
-                        <div class="row h-100">
-                            <div class="col-md-12 my-auto">
-                                    <div class="row align-items-center justify-content-center">
-                                        <h4>Day Planner</h4>
-                                    </div>
-                                <div class="row align-items-center justify-content-center">
-                                    <form>
-                                        <div class="input-group">
-                                            <input id="email" type="text" class="form-control" name="email" placeholder="Email">
-                                        </div>
-                                        <div class="input-group">
-                                            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="row align-items-center justify-content-center">
-                                    <button type="button" class="btn btn-danger">Danger</button>
-                                </div>  
-                            </div>
-                        </div>    
+                <div class="container log_in_box ">
+                    <div class="row h-50 align-items-center justify-content-center">
+                        <h3>Day Planner</h3>                            
                     </div>
+                    <div class="row h-25 align-items-center justify-content-center">
+                        <div class="input-boxs-1">
+                            <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                        </div>                    
+                        <div class="input-boxs-1">
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="row h-25 align-items-center justify-content-center">
+                        <button type="button" id="log_in_button" class="red-button">Login</button>
+                    </div>
+                        
+                </div>    
             </div>
-        </div>
-        
-         
-    
+
     <script src="/index.js"></script>
 
     </body>
