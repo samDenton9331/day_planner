@@ -28,13 +28,20 @@ $('#add_new_course').click(function(e) {
 
 $('#log_in_button').click(() => {
     // TODO
-    document.location.href = "/dashboard";
+    $('#create_account_btn').height($('#log_in_button').height());
+    document.getElementById("select_planner").style.display = "block";
+    document.getElementById("log_box_div").style.display = "none";
 });
 
 $('#create_account').click(() => {
     $('#create_account_btn').height($('#log_in_button').height());
     document.getElementById("create_box").style.display = "block";
     document.getElementById("log_box_div").style.display = "none";
+});
+
+$('#open_planner').click(() => {
+    // TODO
+    document.location.href = "/dashboard";
 });
 
 $('#create_account_btn').click(() => {
