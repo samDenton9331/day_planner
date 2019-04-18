@@ -13,24 +13,39 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="mx-auto order-0">
-             <a class="navbar-brand mx-auto" href="#">Dashboard</a>
-            </div>
-        </nav>
-    
-        <div class="fill">
-            <div class="container">
-                <div class="row pt-2 pl-2">
-                    <h3>My Courses</h3>
-
-                </div>
-                <hr>
+        <div id="nav-dash">
+                <nav  class="navbar navbar-dark bg-dark">
+                        <button id="collaspe_course_bar" class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="mx-auto order-0">
+                         <a class="navbar-brand mx-auto" href="#">Dashboard</a>
+                        </div>
+                    </nav>
+            
+        </div>
+        <div id="dash" class="container-fluid dashboard ">
+            <div class="row h-100">
+                    <div id="course_panel" class="fill col-md-2 pl-0 pr-0" style="display: block;">
+                        <div class="container">
+                            <div class="row">
+                                <h3>My Courses</h3>
+                            </div>                
+                            <hr>
+                        </div>
+                    </div>
+                    <div id ="main_content" class="main_area col-md-10 p-0 pl-0 pr-0">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div> 
+                                    <button>home</button>
+                                </div>
+                            </div>                
+                        </div>
+                    </div>      
             </div>
         </div>
-    <script src="/index.js"></script>        
+  
+    <script src="/dashboard.js"></script>        
     </body>
 </html>

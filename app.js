@@ -54,6 +54,15 @@ app.get('/index.js',function(req,res){
   });
 });
 
+// Send obfuscated JS, do not change
+app.get('/dashboard.js',function(req,res){
+  fs.readFile(path.join(__dirname+'/public/dashboard.js'), 'utf8', function(err, contents) {
+    const minimizedContents = JavaScriptObfuscator.obfuscate(contents, {compact: true, controlFlowFlattening: true});
+    res.contentType('application/javascript');
+    res.send(minimizedContents._obfuscatedCode);
+  });
+});
+
 app.get('/dashboard',function(req,res){
   res.sendFile(path.join(__dirname+'/public/dashboard.html'));
 });
