@@ -23,3 +23,18 @@ $('#collaspe_course_bar').click(() => {
         $("#main_content").width(width);
     }
 });
+
+$('#account_settings_dash').click(() => {
+    console.log("exit");
+    document.location.href = "/";
+});
+
+$('#course_1').click(() => {
+    $('#course_1_div').removeClass('pr-2');
+    changeBtnColor('course_1');
+});
+
+function changeBtnColor(sideBtn) {
+    document.getElementById('home_button').style.backgroundColor = jQuery('#' + sideBtn).css("background-color");
+    document.getElementById('home_button').style.color = jQuery('#' + sideBtn).css("color");
+}

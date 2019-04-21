@@ -14,32 +14,56 @@
     </head>
     <body>
         <div id="nav-dash">
-                <nav  class="navbar navbar-dark bg-dark">
-                        <button id="collaspe_course_bar" class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="mx-auto order-0">
-                         <a class="navbar-brand mx-auto" href="#">Dashboard</a>
-                        </div>
-                    </nav>
-            
+            <nav  class="navbar navbar-dark bg-dark">
+                <button id="collaspe_course_bar" class="navbar-toggler hamburger" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="mx-auto order-0">
+                    <a class="navbar-brand mx-auto" href="#">Dashboard</a>
+                </div>
+            </nav>
         </div>
-        <div id="dash" class="container-fluid dashboard ">
+
+        <div id="dash" class="container-fluid">
             <div class="row h-100">
-                    <div id="course_panel" class="fill col-md-2 pl-0 pr-0" style="display: block;">
-                        <div class="container">
-                            <div class="row">
+                    <div id="course_panel" class= "fill col-md-2 pl-0 pr-0" style="display: block;">
+                        <div class="container-fluid">
+                            <div class="row pl-2">
                                 <h3>My Courses</h3>
-                            </div>                
-                            <hr>
+                            </div>
+
+                            <div class="row"><hr></div>
+
+                            <div id='course_1_div' class="row pl-2 pr-2 pt-2">
+                                <button id="course_1" class="course_button">Luiza's Course</button>
+                            </div>
+
+                            <div id="account_settings_dash" class="row account_settings">
+                                <a>Account Settings</a>
+                            </div>               
+                            
                         </div>
                     </div>
                     <div id ="main_content" class="main_area col-md-10 p-0 pl-0 pr-0">
                         <div class="container-fluid">
-                            <div class="row">
-                                <div> 
-                                    <button>home</button>
+                            <div class="row justify-content-center">
+                                
+                                <div class="col-3 center-buttons pt-1 pb-1"> 
+                                    <button id='home_button' class="nav-btns">Home</button>
                                 </div>
+
+                                <div class="col-3 center-buttons pt-1 pb-1"> 
+                                    <button id='home_button' class="nav-btns">Home</button>
+                                </div>
+
+                                <div class="col-3 center-buttons pt-1 pb-1"> 
+                                    <button id='home_button' class="nav-btns">Home</button>
+                                </div>
+
+                                <div class="col-3 center-buttons pt-1 pb-1"> 
+                                    <button id='home_button' class="nav-btns">Home</button>
+                                </div>
+                                
                             </div>                
                         </div>
                     </div>      

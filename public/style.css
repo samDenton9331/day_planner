@@ -3,29 +3,12 @@ html, body {
     width: 100%;
 }
 
-.dashboard {
-}
-
-.nav-height {
-    height: 5%;
-}
-.courses {
-    margin-top: 10px;
-    margin-left: 10px;
-    height: 800px;
-}
-
-.course_board {
-    /* background-color: blue; */
-    width:80%;
+hr {
+    width: 100%;
 }
 
 .wide {
     width: 100%;
-}
-
-.nopadding {
-
 }
 
 .padding-left {
@@ -35,11 +18,11 @@ html, body {
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh; /* These two lines are counted as one :-)       */
-  
     display: flex;
     align-items: center;
   }
 
+/* Background image for the login page  */
 .Title {
     position: absolute;
     background: url(image.png);
@@ -49,34 +32,22 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
 }
 
-/* Red Login buttons */
-
+/* log in box for the main page */
 .log_in_box {   
     /* Rectangle */
 
     position: absolute;
-    width: 30%;
-    height: 40%;
+    width: 35%;
+    height: 50%;
 
     background: #FCFCFC;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
 }
 
-.log_in_box_create {   
-    /* Rectangle */
-
-    position: absolute;
-    width: 30%;
-    height: 40%;
-
-    background: #FCFCFC;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-}
+/* Buttons for the login pages */
 .red-button-create {
     position: absolute;
     right: 1%;
@@ -103,6 +74,7 @@ html, body {
 
 .fill { 
     width: 20%;
+    height: 100%;
     background-color: #E3E3E3;
 }
 
@@ -110,6 +82,43 @@ html, body {
     position: absolute;
 }
 
-.main_area {
-    background-color: red;
+
+.course_button_div {
+    height: 100%;
+}
+
+.course_button {
+    width: 100%;
+    color: white;
+    padding: 4%;
+    background: #7C7AEF;
+}
+
+/* account_settings button at the bottom of course panel */
+.account_settings {
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+}
+
+.account_settings:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.side-panel {
+    height: 100%;
+}
+
+/* Dashboard buttons across the top */
+.center-buttons {
+    align-content: center;
+    text-align: center;
+    background-color: #E3E3E3;
+}
+
+.nav-btns {
+    width: 80%;
+    background: #7C7AEF;
+    color: white;
 }
