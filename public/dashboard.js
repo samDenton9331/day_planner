@@ -38,3 +38,19 @@ function changeBtnColor(sideBtn) {
     document.getElementById('home_button').style.backgroundColor = jQuery('#' + sideBtn).css("background-color");
     document.getElementById('home_button').style.color = jQuery('#' + sideBtn).css("color");
 }
+
+$('#add_new_course').click(() => {
+    console.log("Adding a course");
+
+    $.ajax({
+        type: 'get',            //Request type
+        dataType: 'json',       //Data type - we will use JSON for almost everything
+        url: '/add_course',   //The server endpoint we are connecting to
+        data: {
+        },
+        success: function (data) {
+            console.log(data);
+            $('#modalwindow').modal('hide');
+        },
+    });
+});

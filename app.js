@@ -8,16 +8,14 @@ const crypto = require('crypto');
    host     : 'localhost',
    user     : 'root',
    password : '',
-   database : 'nodemysql'
+   database : 'day_planner'
  });
 
  database.connect((err) => {
    if (err) {
      throw err;
    }
-
    console.log("Mysql is NOW connected");
-
 });
 
 // Authentication 
@@ -25,7 +23,6 @@ const crypto = require('crypto');
 
 // ----------------- Application ----------------------------
 var app = express();
-
 const fs = require('fs');
 const JavaScriptObfuscator = require('javascript-obfuscator');
 const bodyParser = require('body-parser');
@@ -67,55 +64,22 @@ app.get('/dashboard',function(req,res){
   res.sendFile(path.join(__dirname+'/public/dashboard.html'));
 });
 
-// ************** Create DB **************
-app.get('/create',function(req,res){
-  let sql = 'CREATE DATABASE nodemysql';
-  database.query(sql, (err, result) => {
-    if (err) throw err;
-    res.send("created");
-  })
-});
-
 app.get('/image.png',function(req,res){
   res.sendFile(path.join(__dirname+'/public/image.png'));
 });
 
-// Create table
-app.get('/create_user_id_table', (req, res) => {
-  let sql = 'CREATE TABLE user_id_table(id int AUTO_INCREMENT, user_name VARCHAR(255), hash_code VARCHAR(255), PRIMARY KEY(id))';
-  database.query(sql, (err, result) => {
-      if(err) throw err;
-      console.log(result);
-      res.send('Posts table created...');
-  });
-});
+// ************** Create DB **************
 
 // Adding A new course to the courses table
 app.get('/add_course', (req, res) => {
   let sql = '';
-  database.query(sql, (err, result) => {
-      if(err) throw err;
-      console.log(result);
-      
-  });
+  // database.query(sql, (err, result) => {
+  //     if(err) throw err;
+  //     console.log(result);    
+  // });
+
+  console.log("course created");
   res.json('Created course...');
-});
-
-app.get('/add_new_user', (req, res) => {
-  const pwd = req.query.pwd;
-  let salt = 'abc';
-
-  hashPwd   = crypto.createHash('sha1')
-  .update(pwd+salt)
-  .digest('hex');
-
-  let post = {user_name:'sam', salt: salt, hash_code: hashPwd};
-  let sql = 'INSERT INTO user_id_table SET ?';
-  database.query(sql, post, (err, result) => {
-      if(err) throw err;
-      console.log(result);
-      res.json("User has been created...");
-  });
 });
 
 /*
@@ -127,6 +91,7 @@ app.get('/verify_user', (req, res) => {
   const pwd = req.query.pwd;
   let salt = 'abc';
 
+  console.log(user_name);
   hashPwd   = crypto.createHash('sha1')
   .update(pwd+salt)
   .digest('hex');
@@ -134,12 +99,35 @@ app.get('/verify_user', (req, res) => {
   let sql = "select * from user_id_table where user_name = \'"
     + user_name + "\' and hash_code = \'" + hashPwd + "\';";
 
-  database.query(sql, (err, result) => {
+  // database.query(sql, (err, result) => {
+  //     if(err) throw err;
+  //     console.log(result);
+      res.json(1);
+  // });
+});
+
+app.get('/add_new_user', (req, res) => {
+  const name = req.query.name;
+  const user_name = req.query.user_name;
+  const pwd = req.query.pwd;
+  let salt = 'abc';
+
+  console.log(user_name, pwd);
+
+  // Encription
+  hashPwd   = crypto.createHash('sha1')
+  .update(pwd+salt)
+  .digest('hex');
+
+  // Inserting the new user into the database
+  let post = {user_name:user_name, salt: salt, hash_code: hashPwd};
+  let sql = 'INSERT INTO user_id_table SET ?';
+  database.query(sql, post, (err, result) => {
       if(err) throw err;
       console.log(result);
-      res.json("user is being verified " + hashPwd);
+      res.json("User has been created...");
   });
-})
+});
 
 app.listen(8000);
 console.log('Running app at localhost: ' + 8000);

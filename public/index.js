@@ -6,62 +6,60 @@ $(document).ready(function() {
 
 });
 
-$('#add_new_course').click(function(e) {
-    var node = document.createElement("LI");             
-    var textnode = document.createTextNode("Adding Courses");         
-    node.appendChild(textnode);                              
-    document.getElementById("current_courses").appendChild(node); 
-        
-    $('#add_course_modal').modal('hide');
-
-    $.ajax({
-        type: 'get',            //Request type
-        dataType: 'json',       //Data type - we will use JSON for almost everything
-        url: '/add_course',   //The server endpoint we are connecting to
-        data: {
-        },
-        success: function (data) {
-            console.log(data);
-        },        
-    });
-});
-
 $('#log_in_button').click(() => {
     // TODO
     $('#create_account_btn').height($('#log_in_button').height());
     document.getElementById("select_planner").style.display = "block";
     document.getElementById("log_box_div").style.display = "none";
+
+    var user_name = document.getElementById("email").value;
+    var pwd = document.getElementById("password").value;
+
+    $.ajax({
+        type: 'get',            //Request type
+        dataType: 'json',       //Data type - we will use JSON for almost everything
+        url: '/verify_user',   //The server endpoint we are connecting to
+        data: {
+            user_name: user_name,
+            pwd: pwd
+        },
+        success: function (data) {
+            console.log(data);
+        },
+    });
 });
 
+// The user wants to create a new account on the website
 $('#create_account').click(() => {
     $('#create_account_btn').height($('#log_in_button').height());
     document.getElementById("create_box").style.display = "block";
     document.getElementById("log_box_div").style.display = "none";
 });
 
-$('#open_planner').click(() => {
-    // TODO
-    document.location.href = "/dashboard";
-});
-
 $('#create_account_btn').click(() => {
-    // TODO
-    document.location.href = "/dashboard";
-});
-
-function add_new_user () {  
-    let username = 'sam';
-    let pwd = 'pwd';
+    var name = document.getElementById("name").value;
+    var user_name = document.getElementById("email").value;
+    var pwd = document.getElementById("password").value;
+    var pws_2 = document.getElementById("password_reenter").value;
+    
     $.ajax({
         type: 'get',            //Request type
         dataType: 'json',       //Data type - we will use JSON for almost everything
         url: '/add_new_user',   //The server endpoint we are connecting to
         data: {
-            username: username,
+            name: name,
+            user_name: user_name,
             pwd: pwd
         },
         success: function (data) {
             console.log(data);
-        },        
+        },
     });
-}
+
+    document.location.href = "/dashboard";
+});
+
+$('#open_planner').click(() => {
+    // TODO
+    document.location.href = "/dashboard";
+});

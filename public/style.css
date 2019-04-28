@@ -94,6 +94,16 @@ hr {
     background: #7C7AEF;
 }
 
+.course_add_button {
+    width: 80%;
+    color: white;
+    align-content: center;
+    text-align: center;
+    padding: 4%;
+    font-size: 75%;
+    background: #7C7AEF;
+}
+
 /* account_settings button at the bottom of course panel */
 .account_settings {
     position: absolute;
@@ -121,4 +131,10 @@ hr {
     width: 80%;
     background: #7C7AEF;
     color: white;
+}
+
+.calender {
+    display: block;
+    width: 80%;
+    length: 80%;
 }
