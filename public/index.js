@@ -36,11 +36,19 @@ $('#create_account').click(() => {
     document.getElementById("log_box_div").style.display = "none";
 });
 
+// if the user wants to go back
+$('#create_account_back_button').click(() => {
+    document.getElementById("create_box").style.display = "none";
+    document.getElementById("log_box_div").style.display = "block";
+});
+
 $('#create_account_btn').click(() => {
     var name = document.getElementById("name").value;
-    var user_name = document.getElementById("email").value;
-    var pwd = document.getElementById("password").value;
-    var pws_2 = document.getElementById("password_reenter").value;
+    var user_name = document.getElementById("new_email").value;
+    var pwd = document.getElementById("password_create").value;
+    // var pws_2 = document.getElementById("password_reenter").value;
+
+    console.log(user_name);
     
     $.ajax({
         type: 'get',            //Request type
@@ -56,7 +64,8 @@ $('#create_account_btn').click(() => {
         },
     });
 
-    document.location.href = "/dashboard";
+    document.getElementById("select_planner").style.display = "block";
+    document.getElementById("create_box").style.display = "none";
 });
 
 $('#open_planner').click(() => {

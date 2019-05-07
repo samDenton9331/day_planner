@@ -68,8 +68,6 @@ app.get('/image.png',function(req,res){
   res.sendFile(path.join(__dirname+'/public/image.png'));
 });
 
-// ************** Create DB **************
-
 // Adding A new course to the courses table
 app.get('/add_course', (req, res) => {
   let sql = '';
@@ -91,7 +89,6 @@ app.get('/verify_user', (req, res) => {
   const pwd = req.query.pwd;
   let salt = 'abc';
 
-  console.log(user_name);
   hashPwd   = crypto.createHash('sha1')
   .update(pwd+salt)
   .digest('hex');
@@ -99,6 +96,7 @@ app.get('/verify_user', (req, res) => {
   let sql = "select * from user_id_table where user_name = \'"
     + user_name + "\' and hash_code = \'" + hashPwd + "\';";
 
+  console.log("Verifying the user");
   // database.query(sql, (err, result) => {
   //     if(err) throw err;
   //     console.log(result);
@@ -124,7 +122,7 @@ app.get('/add_new_user', (req, res) => {
   let sql = 'INSERT INTO user_id_table SET ?';
   database.query(sql, post, (err, result) => {
       if(err) throw err;
-      console.log(result);
+      console.log("user has been created");
       res.json("User has been created...");
   });
 });

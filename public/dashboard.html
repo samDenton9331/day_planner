@@ -8,9 +8,8 @@
    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
- <!-- Custom CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="/style.css">
-
     </head>
     <body>
         <div id="nav-dash">
@@ -26,72 +25,68 @@
 
         <div id="dash" class="container-fluid">
             <div class="row h-100">
-                    <div id="course_panel" class= "fill col-md-2 pl-0 pr-0" style="display: block;">
-                        <div class="container-fluid">
-                            <div class="row pl-2 justify-content-center">
-                                <div>
-                                    <h3>My Courses</h3>
-                                </div>
+                <div id="course_panel" class= "fill col-md-2 pl-0 pr-0" style="display: block;">
+                    <div id="course_navs" class="container-fluid">
+                        <div class="row pl-2 justify-content-center">
+                            <div>
+                                <h3>My Courses</h3>
                             </div>
+                        </div>
+                        
+                        <div class="row"><hr></div>
+                        <div id='course_1_div' class="row pl-2 pr-2 pt-2">
+                            <button id="course_1" class="course_button">Luiza's Course</button>
+                        </div>
 
-                            <div class="row"><hr></div>
+                        <div id='add_another_course' class="row pl-2 pr-2 pt-2 justify-content-center">
+                            <button class="course_add_button" data-toggle="modal" data-target="#add_new_course_modal">Add Anouther Course</button>
+                        </div>
 
-                            <div id='course_1_div' class="row pl-2 pr-2 pt-2">
-                                <button id="course_1" class="course_button">Luiza's Course</button>
-                            </div>
-
-                            <div id='course_1_div' class="row pl-2 pr-2 pt-2 justify-content-center">
-                                <button class="course_add_button" data-toggle="modal" data-target="#exampleModalCenter">Add Anouther Course</button>
-                            </div>
-
-                            <div id="account_settings_dash" class="row account_settings">
-                                <a>Account Settings</a>
-                            </div>               
-                            
+                        <div id="account_settings_dash" class="row account_settings">
+                            <a>Account Settings</a>
                         </div>
                     </div>
-                    <div id ="main_content" class="main_area col-md-10 p-0 pl-0 pr-0">
-                        <div class="row">
-                            <div class="container-fluid">
-                                <div class="row justify-content-center">
-                                    
-                                    <div class="col-3 center-buttons pt-1 pb-1"> 
-                                        <button id='home_button' class="nav-btns">Home</button>
-                                    </div>
-    
-                                    <div class="col-3 center-buttons pt-1 pb-1"> 
-                                        <button id='home_button' class="nav-btns">Home</button>
-                                    </div>
-    
-                                    <div class="col-3 center-buttons pt-1 pb-1"> 
-                                        <button id='home_button' class="nav-btns">Home</button>
-                                    </div>
-    
-                                    <div class="col-3 center-buttons pt-1 pb-1"> 
-                                        <button id='home_button' class="nav-btns">Home</button>
-                                    </div>
-                                </div>                
-                            </div>
-                            <!-- <div id="calender" class="row">
-                                <iframe class="calender" src="https://calendar.google.com/calendar/embed?src=samdenton1457%40gmail.com&ctz=America%2FToronto" scrolling="no"></iframe>
-                            </div> -->
+                </div>
+
+                <div id ="main_content" class="col-md-10 p-0 pl-0 pr-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row justify-content-center">
+                                <div class="col-4 center-buttons pt-1 pb-1"> 
+                                    <button id='home_button' class="nav-btns">Home</button>
+                                </div>
+
+                                <div class="col-4 center-buttons pt-1 pb-1"> 
+                                    <button id='schedule_button' class="nav-btns">Schedule</button>
+                                </div>
+
+                                <div class="col-4 center-buttons pt-1 pb-1"> 
+                                    <button id='notes_button' class="nav-btns">Notes</button>
+                                </div>
+                            </div>           
                         </div>
-                    </div>      
+                    </div>
+
+                    <div id="home_content" class="row col-md-12 show_on_load">home content</div>   
+                    <div id="schedule_content" class="row col-md-12 hide_on_load">schedule content</div>  
+                    <div id="notes_content" class="row col-md-12 hide_on_load">notes content</div>    
+                    
+                </div>      
             </div>
         </div>
       
       <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" id="add_new_course_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">Add a New Course</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+                <input type="text" id="course_name">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

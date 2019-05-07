@@ -12,30 +12,27 @@
     </head>
     <body>
 
-        <div class="Title" id="title">
-            <!-- <div>
-                <button type="button" id="create_account" class="red-button-create">Create Account</button>
-            </div> -->
-            
+        <div class="Title" id="title">            
             <div id="log_box_div" class="container-fluid h-100">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="container log_in_box ">
                         <div class="row h-50 align-items-center justify-content-center">
-                            
                             <div><h3>Day Planner</h3></div>
                         </div>
-                        <div class="row h-25 align-items-center justify-content-center">
-                            <div class="input-boxs-1">
-                                <div><input id="email" type="text" class="form-control" name="email" placeholder="Email"></div>
-                            </div>                    
-                            <div class="input-boxs-1">
-                                <div><input id="password" type="password" class="form-control" name="password" placeholder="Password"></div>
-                            </div>
-                        </div>
-                        <div class="row h-25 align-items-center justify-content-center">
-                            <button type="button" id="create_account" class="red-button">Create Account</button>
-                            <button type="button" id="log_in_button" class="red-button">Login</button>
-                        </div>
+                        <!-- <form action=""> -->
+                            <div class="row h-25 align-items-center justify-content-center">
+                                    <div class="input-boxs-1">
+                                        <div><input id="email" type="text" class="form-control" name="email" placeholder="Email"></div>
+                                    </div>                    
+                                    <div class="input-boxs-1">
+                                        <div><input id="password" type="password" class="form-control" name="password" placeholder="Password"></div>
+                                    </div>
+                                </div>
+                                <div class="row h-25 align-items-center justify-content-center">
+                                    <button type="button" id="create_account" class="red-button">Create Account</button>
+                                    <button type="button" id="log_in_button" class="red-button">Login</button>
+                                </div>
+                        <!-- </form> -->
                     </div>    
                 </div>
             </div>   
@@ -47,22 +44,32 @@
                         <div class="row h-25 align-items-center justify-content-center">
                             <div><h3>Create Account</h3></div>
                         </div>
-                        <div class="row h-50 align-items-center justify-content-center">
-                            <div class="input-boxs-1">
-                                <div><input id="name" type="text" class="form-control" name="email" placeholder="Name"></div>
-                            </div>
-                            <div class="input-boxs-1">
-                                <div><input id="email" type="text" class="form-control" name="email" placeholder="Email"></div>
-                            </div>
-                            <div class="input-boxs-1">
-                                <div><input id="password_create" type="password" class="form-control" name="password" placeholder="Password"></div>
-                            </div>
-                            <div class="input-boxs-1">
-                                <div><input id="password_reenter" type="password" class="form-control" name="password" placeholder="Re-Enter Password"></div>
-                            </div>
+                        <form>
+                            <div class="row h-50 align-items-center justify-content-center">
+                            
+                                <div class="input-boxs-1">
+                                    <div><input id="name" type="text" class="form-control" name="email" placeholder="Name"></div>
+                                </div>
+                                <div class="input-boxs-1">
+                                    <div><input id="new_email" type="text" class="form-control" name="email" placeholder="Email"></div>
+                                </div>
+                                <div class="input-boxs-1">
+                                    <div><input id="password_create" type="password" class="form-control" name="password" placeholder="Password"></div>
+                                </div>
+                                <div class="input-boxs-1">
+                                    <div><input id="password_reenter" type="password" class="form-control" name="password" placeholder="Re-Enter Password"></div>
+                                </div>      
+                            </form>
+                          
                         </div>
                         <div class="row h-25 align-items-center justify-content-center">
-                            <button type="button" id="create_account_btn" class="red-button">Create Account</button>
+                            <div class="col-md-8 ">
+                                <button type="button" id="create_account_btn" class="red-button-create">Create Account</button>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- <button id="create_account_back_button"><img src="https://www.bydeluxe.com/static/djangocms_admin_style/fonts/src/chevron-circle-left.svg" alt=""></button> -->
+                            <input class="back_button" type="image" id="create_account_back_button" alt="Login" src="https://www.bydeluxe.com/static/djangocms_admin_style/fonts/src/chevron-circle-left.svg">
                         </div>
                     </div>    
                 </div>
@@ -73,7 +80,6 @@
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="container log_in_box">
                         <div class="row h-25 align-items-center justify-content-center">
-                            
                             <div><h3>Select Planner</h3></div>
                         </div>
                         <div class="row h-25 align-items-center justify-content-center">
@@ -82,7 +88,6 @@
                     </div>    
                 </div>
             </div>   
-
         </div>
 
     <script src="/index.js"></script>

@@ -34,6 +34,9 @@ hr {
     background-size: cover;
 }
 
+.main_area {
+    width: 100%;
+}
 /* log in box for the main page */
 .log_in_box {   
     /* Rectangle */
@@ -47,17 +50,25 @@ hr {
     border-radius: 5px;
 }
 
+/* log in box for the main page */
+.log_in_box_create {
+    position: absolute;
+    width: 35%;
+    height: 50%;
+    background: #FCFCFC;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
 /* Buttons for the login pages */
 .red-button-create {
-    position: absolute;
-    right: 1%;
-    top: 1%;
-    width: 11.165%;
-    height: 5%;
     background-color: #EF817A;
     color: #FFFFFF;
-    
+    width: 100%;
+    text-align: center;
+    margin: auto;
 }
+
 .red-button {
     width: 40%;
     background-color: #EF817A;
@@ -72,6 +83,14 @@ hr {
     padding-bottom: 2%;
 }
 
+.back_button {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    left: 1%;
+    top: 1%;
+}
+
 .fill { 
     width: 20%;
     height: 100%;
@@ -81,7 +100,6 @@ hr {
 .hamburger {
     position: absolute;
 }
-
 
 .course_button_div {
     height: 100%;
@@ -137,4 +155,16 @@ hr {
     display: block;
     width: 80%;
     length: 80%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.hide_on_load {
+    display: none;  
+}
+
+.show_on_load {
+    display: block;  
 }
