@@ -3,20 +3,20 @@ var path = require('path');
 const crypto = require('crypto');
 
 //----------------- SQL Server -----------------------
- var mysql      = require('mysql');
- var database = mysql.createConnection({
-   host     : 'localhost',
-   user     : 'root',
-   password : '',
-   database : 'day_planner'
- });
+//  var mysql      = require('mysql');
+//  var database = mysql.createConnection({
+//    host     : 'localhost',
+//    user     : 'root',
+//    password : '',
+//    database : 'day_planner'
+//  });
 
- database.connect((err) => {
-   if (err) {
-     throw err;
-   }
-   console.log("Mysql is NOW connected");
-});
+//  database.connect((err) => {
+//    if (err) {
+//      throw err;
+//    }
+//    console.log("Mysql is NOW connected");
+// });
 
 // Authentication 
 // const myModule = require('./authentication');
@@ -119,12 +119,12 @@ app.get('/add_new_user', (req, res) => {
 
   // Inserting the new user into the database
   let post = {user_name:user_name, salt: salt, hash_code: hashPwd};
-  let sql = 'INSERT INTO user_id_table SET ?';
-  database.query(sql, post, (err, result) => {
-      if(err) throw err;
-      console.log("user has been created");
+  // let sql = 'INSERT INTO user_id_table SET ?';
+  // database.query(sql, post, (err, result) => {
+  //     if(err) throw err;
+  //     console.log("user has been created");
       res.json("User has been created...");
-  });
+  // });
 });
 
 app.listen(8000);
